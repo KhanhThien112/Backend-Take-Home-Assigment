@@ -91,6 +91,7 @@ const userTotalFriendCount = (db: Database) => {
     ])
     .groupBy('friendships.userId')
 }
+// Create userMutualFriendCount to the returned result of this query
 const userMutualFriendCount = (db: Database, friendUserId: number) => {
   return db
     .selectFrom('friendships as f1')
